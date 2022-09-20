@@ -36,7 +36,7 @@ La extensión de Markdown y Markdown Enhanced permite la creación de documentos
 
 ## Desarrollo
 
-####Clasificación de los robots móviles por configuración
+#### Clasificación de los robots móviles por configuración
 
 Según su tipo de locomoción, es decir el cómo se desplazan de un punto a otro, se encuentran los robots terrestres, aéreos, acuáticos, flotantes y submarinos.
 
@@ -46,7 +46,7 @@ Pero la configuración del robot hace referencia a la manera en que están distr
 
 En cuanto a las ruedas, las configuraciones típicas son: diferencial, triciclo, Ackerman, sincronizada, omnidireccional, con múltiples grados de libertad y movimiento mediante orugas. Por ejemplo, en la diferencial, dos ruedas con motor, situadas diametralmente opuestas en un eje perpendicular a la dirección del robot,dan a este un giro, según las diferentes velocidades que tenga cada una. Los motores son elegidos tomando en cuenta la fuerza y el ahorro de energía requeridos.[[2]](#2)
 
-####Restricciones cinemáticas
+#### Restricciones cinemáticas
 
 Por lo que entiendo de lo recabado en distintos sitios web y trabajos de tesis de distintos niveles y lo que resulta de mi intuición, en general, los robots móviles siempre tienen restricción en cuanto a movimientos sobre un eje vertical perpendicular al plano principal en el que se desplazan, además de su rotación sobre los otros dos ejes que involucran que el robot traspase el plano mencionado.
 
@@ -54,41 +54,41 @@ Las variaciones o diferencias entre las restricciones de movimiento de un robot 
 
 Así sucede con los diferentes tipos de ruedas, cada una, ya sea fija, orientable centrada, orientable descentrada (castor) y sueca (también denominada universal, Mecanum ó Ilon) tiene diferntes restricciones.[[3]](#3)
 
-####Conceptos de localización, ruta, odometría y planeación de ruta.
+#### onceptos de localización, ruta, odometría y planeación de ruta.
 
-#####Localización
+##### Localización
 
 Consiste en determinar la posición de un robot respecto a un sistema de referencia o mapa del entorno. Dicha posición no se puede medir directamente, sino que se infiere a partir de datos sensoriales integrados a lo largo del tiempo con distintas mediciones. En función del conocimiento de la posición inicial del robot, se distinguen las siguientes dos tareas:
 
 - Seguimiento de la posición: Se asume que la posición inicial del robot es conocida.
 - Localización global: Se desconoce la ubicación inicial del robot en el entorno.
 
-#####Ruta
+##### Ruta
 
 Es el camino determinado que llevará al robot de un sitio de partida a otro destino. Se busca que la ruta o trayectoria sea óptima, evitando obstáculos y, dependiendo de los sensores y capacidades del robot, esta podría cambiar en el transcurso.
 
-#####Odometría
+##### Odometría
 
 Estudio de la estimación de la posición de vehículos con ruedas durante la navegación. Se usa información sobre la rotación de las ruedas para estimar cambios en la posición a lo largo del tiempo.
 Los robots móviles usan la odometría para estimar (y no determinar) su posición relativa a su localización inicial, integrando la información incremental del movimiento a lo largo del tiempo.
 
-#####Planeación de ruta
+##### Planeación de ruta
 
 Encontrar una ruta óptima transitable, libre de obstáculos, entre una posición de origen o punto de partida y una posición objetivo o punto de llegada que el robot pueda seguir y cumplir físicamente.
 
 Existen distintos métodos de planificación de trayectorias, tales como los Grafos de visibilidad, diagramas de Voronoi, roadmap probabilístico, modelado del espacio libre, descomposición en celdas o campos potenciales.
 
 
-####Diferencias entre sistemas holonómicos y no-honolomicos.
+#### Diferencias entre sistemas holonómicos y no-honolomicos.
 
 Esta clasificación está relacionada con la movilidad de los sistemas en cuestión. Los sistemas holonómicos son aquellos capaces de modificar su dirección instantáneamente, sin tomar en cuenta la masa del sistema y lo que pueda costar ponerla en movimiento, y sin necesidad de rotar previamente. Los no holonómicos son los incapaces de hacerlo.
 
-####Caracterización de la plataforma móvil TurtleBot3:
+#### Caracterización de la plataforma móvil TurtleBot3:
 
 
 
 
-#####Modelo cinemático
+##### Modelo cinemático
 
 Se trata de un robot diferencial
 
@@ -113,7 +113,7 @@ donde:
 
 
 
-#####Sensores y actuadores que lo integran.
+##### Sensores y actuadores que lo integran.
 
 Motores DYNAMIXEL XL430.
 Características:
@@ -145,7 +145,7 @@ CARACTERISTICAS
 | **Rango angular** | 360° |
 | **Resolución** | 1° |
 
-#####Nodos y Tópicos de ROS utilizados por la plataforma Turtlebot3 y sus sensores
+##### Nodos y Tópicos de ROS utilizados por la plataforma Turtlebot3 y sus sensores
 
 Nodos: SLAM, Teleoperation
 Tópicos: cmd_vel (Para velocidad), odom (Para la odometría), LaserScan
